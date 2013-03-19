@@ -10,7 +10,7 @@ import br.com.practica1.model.*;
 
 public class UsuarioDAO {
  
-	public void crearSession(Usuario usuario) {
+	public void crearSession(Usuario usuario) {//
 		Sessao sessao = Sessao.getInstance();
 		sessao.setUsuario(usuario);
 	}
