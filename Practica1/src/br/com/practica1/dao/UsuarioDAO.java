@@ -10,7 +10,7 @@ import br.com.practica1.model.*;
 
 public class UsuarioDAO {
  
-	public void crearSession(Usuario usuario) {//
+	public void crearSession(Usuario usuario) {
 		Sessao sessao = Sessao.getInstance();
 		sessao.setUsuario(usuario);
 	}
@@ -24,7 +24,7 @@ public class UsuarioDAO {
 		Usuario usuario = null;
 		while (rs.next()) {
 			usuario = new Usuario();
-			usuario.setContrasena(rs.getString("Contraseña"));
+			usuario.setContrasena(rs.getString("Contraseï¿½a"));
 			usuario.setCorreo(rs.getString("Correo"));
 			usuario.setDescripcion(rs.getString("Descripcion"));
 			usuario.setFechaNacimento(rs.getDate("FechaNacimiento"));
@@ -39,7 +39,7 @@ public class UsuarioDAO {
 		List<Usuario> listaUsuario = new ArrayList<>();
 		while (rs.next()) {
 			Usuario usuario = new Usuario();
-			usuario.setContrasena(rs.getString("Contraseña"));
+			usuario.setContrasena(rs.getString("Contraseï¿½a"));
 			usuario.setCorreo(rs.getString("Correo"));
 			usuario.setDescripcion(rs.getString("Descripcion"));
 			usuario.setFechaNacimento(rs.getDate("FechaNacimiento"));
@@ -52,7 +52,7 @@ public class UsuarioDAO {
 
 	// Recebe usuario com correo e senha e tenta conectar-lo. Retorna true se
 	// conseguiu
-	// e false se não
+	// e false se nï¿½o
 	public Boolean conectarUsuario(Usuario usuario) {
 		String sql = "SELECT * FROM usuario WHERE Correo = ?";
 
@@ -98,7 +98,7 @@ public class UsuarioDAO {
 	}
 
 	public void salvar(Usuario usuario) {
-		String sql = "INSERT INTO usuario(Correo,Contraseña)" + " VALUES(?,?)";
+		String sql = "INSERT INTO usuario(Correo,Contraseï¿½a)" + " VALUES(?,?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -130,7 +130,7 @@ public class UsuarioDAO {
 	}
 
 	// TODO
-	// Atualizar todos os campos e não somente Nick, Descrição e data de
+	// Atualizar todos os campos e nï¿½o somente Nick, Descriï¿½ï¿½o e data de
 	// Nacimento
 	public void actualizar(Usuario usuario) {
 
