@@ -14,8 +14,7 @@ public class FotoDAO {
 //		ResultSet rs = null;
 //		PreparedStatement pstm = null;
 		if(conn != null){
-			//testee
-		
+			//testee22	
 			
 		}
 		
