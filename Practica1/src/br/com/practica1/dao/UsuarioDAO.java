@@ -9,7 +9,7 @@ import java.util.List;
 import br.com.practica1.model.*;
 
 public class UsuarioDAO {
-
+ 
 	public void crearSession(Usuario usuario) {
 		Sessao sessao = Sessao.getInstance();
 		sessao.setUsuario(usuario);
